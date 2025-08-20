@@ -1,7 +1,6 @@
+# JamsrPay Integration with Nextjs
 
-# JamsrPay Setup Template
-
-This template helps you quickly set up and configure JamsrPay.
+This repo helps you quickly set up and configure JamsrPay.
 
 ## Prerequisites
 
@@ -12,36 +11,37 @@ Before setting up JamsrPay, ensure you have the following:
 
 ## Installation
 
-   ```sh
-   pnpm install
-   # or
-   npm install
-   ```
+```sh
+pnpm install
+# or
+npm install
+```
 
- **Set up the database**
-   Ensure you have PostgreSQL running and create a new database "JamsrPay"
+**Set up the database**
+Ensure you have PostgreSQL running and create a new database "JamsrPay"
 
-   ```sh
-   pnpm db:push
-   ```
+```sh
+pnpm db:push
+```
 
 **Configure Environment Variables**
-   Create a `.env` file in the project root and add the necessary values:
+Create a `.env` file in the project root and add the necessary values:
 
-   ```env
-   DATABASE_URL=postgresql://user:password@localhost:5432/JamsrPay
-   SECRET_KEY="your-secret-key"
-   ```
+```env
+DATABASE_URL=postgresql://user:password@localhost:5432/JamsrPay
+API_KEY="your-api"
+WEBHOOK_SECRET="your-secret-key"
+```
+
 Create Webhook on JamsrPay https://sandbox.jamsrpay.com
 
 **Start the development server**
 
-   ```sh
-   pnpm dev
-   ```
+```sh
+pnpm dev
+```
 
-   The server should be running at `http://localhost:3000`
-
+The server should be running at `http://localhost:3000`
 
 **Ngrok Setup (For Local Webhook Testing)**
 
@@ -49,10 +49,9 @@ If you need to test webhooks locally, install and run ngrok: https://ngrok.com/d
 
 Start ngrok to expose your local server:
 
-
-  ```sh
+```sh
 ngrok http 3000
-   ```
+```
 
 **Test Coin**
 

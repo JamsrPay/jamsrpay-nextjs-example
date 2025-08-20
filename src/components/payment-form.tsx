@@ -10,7 +10,7 @@ import { useForm } from "react-hook-form";
 type FormValues = CreatePaymentFormValues;
 export const PaymentForm = () => {
   const defaultValues: FormValues = {
-    amount: 1,
+    amount: 10,
   };
   const methods = useForm({
     defaultValues,
